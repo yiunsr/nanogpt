@@ -37,13 +37,13 @@ init_from = 'scratch' # 'scratch' or 'resume'
 out_dir = r'/content/drive/MyDrive/colab/res/out'
 eval_interval = 100
 log_interval = 1
-eval_iters = 100
+eval_iters = 200
 eval_only = False # if True, script exits right after the first eval
 always_save_checkpoint = True # if True, always save a checkpoint after each eval
 
 # data
 gradient_accumulation_steps = 5 * 8 # used to simulate larger batch sizes
-batch_size = 180 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+batch_size = 60 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 256 # 1024
 # model
 n_layer = 6 # 12
@@ -92,7 +92,7 @@ ptdtype = {'float32': torch.float32, 'bfloat16': torch.bfloat16, 'float16': torc
 ctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=device_type, dtype=ptdtype)
 
 # poor man's data loader
-data_dir = "/content/"
+data_dir = "/content/drive/MyDrive/colab/res/"
 train_data = np.memmap(os.path.join(data_dir, 'train.bin'), dtype=np.uint16, mode='r')
 val_data = np.memmap(os.path.join(data_dir, 'val.bin'), dtype=np.uint16, mode='r')
 def get_batch(split):
