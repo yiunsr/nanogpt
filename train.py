@@ -35,7 +35,7 @@ init_from = 'scratch' # 'scratch' or 'resume'
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 out_dir = r'/content/drive/MyDrive/colab/res/out'
-eval_interval = 200
+eval_interval = 100
 log_interval = 1
 eval_iters = 100
 eval_only = False # if True, script exits right after the first eval
