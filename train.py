@@ -37,7 +37,7 @@ init_from = 'scratch' # 'scratch' or 'resume'
 out_dir = r'/content/drive/MyDrive/colab/res/out'
 eval_interval = 100
 log_interval = 1
-eval_iters = 200
+eval_iters = 400
 eval_only = False # if True, script exits right after the first eval
 always_save_checkpoint = True # if True, always save a checkpoint after each eval
 
