@@ -43,7 +43,7 @@ always_save_checkpoint = True # if True, always save a checkpoint after each eva
 
 # data
 gradient_accumulation_steps = 5 * 8 # used to simulate larger batch sizes
-batch_size = 300 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+batch_size = 180 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 256 # 1024
 # model
 n_layer = 6 # 12
