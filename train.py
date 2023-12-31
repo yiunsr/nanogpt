@@ -34,7 +34,7 @@ init_from = 'scratch' # 'scratch' or 'resume'
 # -----------------------------------------------------------------------------
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
-out_dir = r'D:\workspace\vscode3\deep\nanoGPT01\out'
+out_dir = r'/content/drive/MyDrive/colab/res/out'
 eval_interval = 500
 log_interval = 1
 eval_iters = 200
@@ -92,7 +92,7 @@ ptdtype = {'float32': torch.float32, 'bfloat16': torch.bfloat16, 'float16': torc
 ctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=device_type, dtype=ptdtype)
 
 # poor man's data loader
-data_dir = "D:\\workspace\\vscode3\\deep\\nanoGPT01\\res3\\"
+data_dir = "/content/drive/MyDrive/colab/res/"
 train_data = np.memmap(os.path.join(data_dir, 'train.bin'), dtype=np.uint16, mode='r')
 val_data = np.memmap(os.path.join(data_dir, 'val.bin'), dtype=np.uint16, mode='r')
 def get_batch(split):
